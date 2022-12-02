@@ -4,7 +4,13 @@ const Footer = () => {
   return (
     <footer>
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <img src='../../images/DH.png' alt='DH-logo' />
+        <div>
+        <img src='../../images/facebook.svg' alt='facebook-logo' />
+        <img src='../../images/instagram.svg' alt='instagram-logo' />
+        <img src='../../images/whatsapp.svg' alt='whatsapp-logo' />
+        <img src='../../images/tik-tok.svg' alt='tiktok-logo' />
+        </div>
     </footer>
   )
 }

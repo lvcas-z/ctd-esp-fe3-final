@@ -7,6 +7,7 @@ const Navbar = () => {
 
   return (
     <nav>
+      <p>DH Odonto</p>
       <Link to={'/'}><h4>Home</h4></Link>
       <Link to={'/contacto'}><h4>Contact</h4></Link>
       <Link to={'/favs'}><h4>Favs</h4></Link>
