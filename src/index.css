@@ -25,9 +25,9 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
-  padding: 1rem;
+  width: 100%;
+  justify-content: space-around;
+  font-size: 1.3rem;
 }
 
 a{
@@ -40,16 +40,15 @@ a:hover{
   color: rgb(136, 136, 136);
 } 
 
-footer {
+footer{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   bottom: 0;
   width: 90%;
   height: 40px;
-  margin-top: 2rem;
 }
 
 footer > img{
@@ -129,4 +128,37 @@ tr:nth-child(even) {
 .favButton img{
   height: 20px;
   width: auto;
+}
+
+nav .items-nav{
+  display: flex;
+}
+
+nav a{
+  font-size: 1rem;
+  padding: 0px 15px
+}
+
+nav button{
+  width: 2rem;
+  height: 2rem;
+  margin-top: 20px;
+}
+
+nav button img{
+  width: auto;
+  height: 1.1rem;
+}
+
+p span{
+  color:#ff0000
+}
+
+.second-footer{
+  display:flex;
+  height: 40px;
+  text-align:center;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
 }
