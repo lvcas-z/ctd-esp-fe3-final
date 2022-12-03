@@ -8,25 +8,28 @@ const Form = () => {
     name: '',
     email: '',
   })
+  const message = null;
+
+  const handleChange =(e)=>{
+      setUser({
+        ...user,
+        [e.target.name]:e.target.value
+      })
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    alert(`
-    Nombre: ${user.name} 
-    Email: ${user.email}
-    `)
+    const message = `Gracias ${user.name}, te contactaremos cuanto antes via email`
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label></label>
-        <input type="text" name='name' placeholder="Nombre" onChange={(event) => setUser({...user, name: event.target.value})} />
-        <label></label>
-        <input type="email" name='email' placeholder="Email" onChange={(event) => setUser({...user, email: event.target.value})}/>
+        <input required type="text" name='name' placeholder="Nombre" onChange={handleChange} />
+        <input required type="email" name='email' placeholder="Email" onChange={handleChange}/>
+        <button type="submit">Enviar</button>
       </form>
-
-      <h4>Gracias {user.name}, te contactaremos cuanto antes via email</h4>
+      <h3>{message!=null?message:"No funca"}</h3>
     </div>
   );
 };
