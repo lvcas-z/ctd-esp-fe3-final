@@ -23,7 +23,7 @@ useEffect(()=>{
       <h1>Home</h1>
       <div className='card-grid'>
         {dentists.map(item=>(
-          <Card name={item.name} username={item.username} id={item.id}/>
+          <Card key={item.id} name={item.name} username={item.username} id={item.id}/>
         ))}
       </div>
     </main>

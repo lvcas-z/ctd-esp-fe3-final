@@ -4,32 +4,28 @@ import React, {useState} from "react";
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
 
-  const [user, setUser] = useState({
-    name: '',
-    email: '',
-  })
-  const message = null;
+  const [name, setName] = useState()
+  const [message,setMessage]=useState()
 
-  const handleChange =(e)=>{
-      setUser({
-        ...user,
-        [e.target.name]:e.target.value
-      })
-  }
-
-  const handleSubmit = (e) => {
+  const handleSubmit = (e)=>{
     e.preventDefault()
-    const message = `Gracias ${user.name}, te contactaremos cuanto antes via email`
+      if(name.length <5){
+        setMessage("Please verify your information")
+      }else{
+        setMessage(`Gracias ${name},te contactaremos cuanto antes via mail`)
+      }
+      return message
   }
+
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input required type="text" name='name' placeholder="Nombre" onChange={handleChange} />
-        <input required type="email" name='email' placeholder="Email" onChange={handleChange}/>
+        <input required type="text" name='name' placeholder="Nombre" onChange={(e)=>setName(e.target.value)}/>
+        <input required type="email" name='email' placeholder="Email"/>
         <button type="submit">Enviar</button>
       </form>
-      <h3>{message!=null?message:"No funca"}</h3>
+      <h3>{message}</h3>
     </div>
   );
 };

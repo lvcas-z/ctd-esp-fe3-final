@@ -1,11 +1,20 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 const Card = ({ name, username, id }) => {
 
+  const [fav,setFav]=useState([])
+  
   const addFav = ()=>{
-    // localStorage.setItem('dentistFav',JSON.stringify(name,username))
+    const newFav ={
+      name:name,
+      username:username,
+      id:id
+    }
+    setFav([...fav,newFav])
+    console.log(fav)
   }
 
   return (
