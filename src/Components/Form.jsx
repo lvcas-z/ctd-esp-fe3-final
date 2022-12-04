@@ -9,12 +9,23 @@ const Form = () => {
 
   const handleSubmit = (e)=>{
     e.preventDefault()
-      if(name.length <5){
+
+    let re = /\w+\s/g;
+
+    if (re.test(name) && name.length>3 && name.length<150 && !/[0-9]/.test(name)){
+      setMessage(`Gracias ${name},te contactaremos cuanto antes via mail`)
+    } else {
+        setMessage("Please verify your information")
+    }
+    return message
+
+
+      /*if(name.length <5 ){
         setMessage("Please verify your information")
       }else{
         setMessage(`Gracias ${name},te contactaremos cuanto antes via mail`)
       }
-      return message
+      return message*/
   }
 
 

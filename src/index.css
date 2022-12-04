@@ -161,4 +161,16 @@ p span{
   font-size: 1rem;
   align-items: center;
   justify-content: center;
+  margin:0px;
+}
+
+.icons{
+  width: 25px;
+  height: auto;
+  padding: 0px 6px;
+}
+
+.title{
+  margin: 0px;
+  padding: 15px 0px;
 }
