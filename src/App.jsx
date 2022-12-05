@@ -5,12 +5,12 @@ import Home from "./Routes/Home"
 import Contact from "./Routes/Contact"
 import Detail from "./Routes/Detail"
 import Favs from "./Routes/Favs"
-import ThemeProvider from "./Components/utils/ThemeProvider";
+import { useTheme } from './Components/utils/ThemeProvider'
 
 function App() {
+  const {theme} = useTheme()
   return (
-    <ThemeProvider>
-      <div className="App" >
+      <div className={theme.body} >
         
         <Navbar/>
           <Routes>
@@ -22,7 +22,6 @@ function App() {
         <Footer/>
         
       </div>
-      </ThemeProvider>
   );
 }
 

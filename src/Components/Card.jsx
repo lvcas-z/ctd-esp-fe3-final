@@ -26,7 +26,7 @@ const Card = ({name, username, id }) => {
           <h3 className={theme.text}>{name}</h3>
           <p className={theme.text}>{username}</p>
         </Link>
-        <button onClick={addFav} className={"favButton"}>{ null ? <img src='../../images/favorite.svg' alt='FavButton' /> : <img src='../../images/fav2.png' alt='FavButton' />}</button>
+        <button onClick={addFav} className={"favButton"}>{ null? <img src='../../images/favorite.svg' alt='FavButton' /> : <img src='../../images/fav2.png' alt='FavButton' />}</button>
       </div>
   );
 };
