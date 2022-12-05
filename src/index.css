@@ -224,3 +224,17 @@ p span{
 .text{
   color:#d8d8d8
 }
+
+.footerBottom{
+  display:flex;
+  justify-content: baseline;
+}
+
+.footerBody-dark{
+  background-color: #8c8c8c;
+  height: 70vh;
+}
+
+.footerBody-light{
+  height: 70vh;
+}

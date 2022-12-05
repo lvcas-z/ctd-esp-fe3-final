@@ -9,7 +9,7 @@ const Footer = () => {
     <div className={theme.body}>
       <p class='second-footer' className={theme.secondFooter} >VOLTAR PARA O TOPO</p>
     
-    <footer className={theme.body}>
+    <footer className={theme.footer}>
         <img className={theme.logo} src='../../images/DH.png' alt='DH-logo' />
         <div>
         <img className={theme.icons} src='../../images/ico-facebook.png' alt='facebook-logo' />

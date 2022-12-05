@@ -11,6 +11,7 @@ const themeStyles = {
         card: 'card card-dark',
         text: 'text',
         title: 'title title-dark',
+        footerBody: 'footerBody-dark'
 
     },
     light:{
@@ -20,6 +21,7 @@ const themeStyles = {
         icons: 'icons-light icons',
         card: 'card card-light',
         title: 'title',
+        footerBody: 'footerBody-light'
     }
 }
 

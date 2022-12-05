@@ -7,7 +7,7 @@ import { useTheme } from '../Components/utils/ThemeProvider'
 const Contact = () => {
   const {theme} = useTheme()
   return (
-    <div className={theme.body}>
+    <div className={theme.footerBody}>
       <h2 className={theme.title}>Want to know more?</h2>
       <p className={theme.text}>Send us your questions and we will contact you</p>
       <Form/>
