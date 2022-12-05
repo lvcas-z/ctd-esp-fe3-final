@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import { useTheme } from './utils/ThemeProvider'
 
 
-const Card = ({fav,setFav, name, username, id }) => {
+const Card = ({name, username, id }) => {
   const {theme} = useTheme()
-  
+  const {fav, setFav} = useTheme()
 
   const addFav = (e)=>{
+    e.currentTarget.disabled = true
     
     const newFav ={
       name:name,
@@ -15,7 +16,6 @@ const Card = ({fav,setFav, name, username, id }) => {
       id:id
     }
     setFav([...fav,newFav])
-    e.currentTarget.disabled = true
     localStorage.setItem("favs",JSON.stringify(fav))
   }
   

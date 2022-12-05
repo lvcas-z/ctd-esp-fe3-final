@@ -19,7 +19,7 @@ const Detail = () => {
 }
   useEffect(()=>{
     getDentist()
-  },[])
+  },[dentist])
 
 
   return (

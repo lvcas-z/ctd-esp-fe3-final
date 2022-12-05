@@ -25,7 +25,7 @@ const Form = () => {
   return (
     <div className={theme.body}>
       <form onSubmit={handleSubmit}>
-        <input required type="text" name='name' placeholder="Nombre" onChange={(e)=>setName(e.target.value)}/>
+        <input required type="text" name='name' placeholder="Nombre Completo" onChange={(e)=>setName(e.target.value)}/>
         <input required type="email" name='email' placeholder="Email"/>
         <button type="submit">Enviar</button>
       </form>

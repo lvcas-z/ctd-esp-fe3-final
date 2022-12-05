@@ -26,9 +26,12 @@ const themeStyles = {
 const ThemeContext = createContext();
 
 const ThemeProvider = (props) => {
+    const [fav,setFav]=useState([])
     const [theme, setTheme] = useState('light');
     const toggleTheme = () => {theme === 'light' ? setTheme('dark') : setTheme('light')}
     const value = {
+        fav,
+        setFav,
         theme: themeStyles[theme],
         toggleTheme,
         themeName: theme
