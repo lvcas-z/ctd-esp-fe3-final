@@ -1,23 +1,26 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from './utils/ThemeProvider'
 
 
-const Card = ({ name, username, id }) => {
+const Card = ({fav,setFav, name, username, id }) => {
   const {theme} = useTheme()
-  const [fav,setFav]=useState([])
   
-  const addFav = ()=>{
+
+  const addFav = (e)=>{
+    
     const newFav ={
       name:name,
       username:username,
       id:id
     }
     setFav([...fav,newFav])
-    console.log(fav)
+    e.currentTarget.disabled = true
+    localStorage.setItem("favs",JSON.stringify(fav))
   }
-
+  
   return (
     <div key={id} className="card" >
         <Link to={'/dentista/'+id}>
