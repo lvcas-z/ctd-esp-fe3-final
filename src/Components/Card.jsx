@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from './utils/ThemeProvider'
 
@@ -22,13 +20,13 @@ const Card = ({fav,setFav, name, username, id }) => {
   }
   
   return (
-    <div key={id} className="card" >
+    <div key={id} className={theme.card} >
         <Link to={'/dentista/'+id}>
           <img src="./images/doctor.jpg" alt="foto odontologo"/>
-          <h3 style={{color:theme.textColor}}>{name}</h3>
-          <p style={{color:theme.textColor}}>{username}</p>
+          <h3 className={theme.text}>{name}</h3>
+          <p className={theme.text}>{username}</p>
         </Link>
-        <button onClick={addFav} className="favButton"><img src='../../images/favorite.svg' alt='FavButton' /></button>
+        <button onClick={addFav} className={"favButton"}>{ null ? <img src='../../images/favorite.svg' alt='FavButton' /> : <img src='../../images/fav2.png' alt='FavButton' />}</button>
       </div>
   );
 };

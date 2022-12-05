@@ -1,13 +1,15 @@
 import React from 'react'
 import Form from '../Components/Form'
+import { useTheme } from '../Components/utils/ThemeProvider'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Contact = () => {
+  const {theme} = useTheme()
   return (
-    <div>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+    <div className={theme.body}>
+      <h2 className={theme.title}>Want to know more?</h2>
+      <p className={theme.text}>Send us your questions and we will contact you</p>
       <Form/>
     </div>
   )

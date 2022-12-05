@@ -1,9 +1,10 @@
 import React, {useState} from "react";
+import { useTheme } from '../Components/utils/ThemeProvider'
 
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
-
+  const {theme} = useTheme()
   const [name, setName] = useState()
   const [message,setMessage]=useState()
 
@@ -22,7 +23,7 @@ const Form = () => {
 
 
   return (
-    <div>
+    <div className={theme.body}>
       <form onSubmit={handleSubmit}>
         <input required type="text" name='name' placeholder="Nombre" onChange={(e)=>setName(e.target.value)}/>
         <input required type="email" name='email' placeholder="Email"/>

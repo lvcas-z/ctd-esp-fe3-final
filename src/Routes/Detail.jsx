@@ -2,11 +2,13 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { useTheme } from '../Components/utils/ThemeProvider'
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
+  const {theme} = useTheme()
   const [dentist,setDentist]= useState([])
   const params = useParams()
 
@@ -21,8 +23,8 @@ const Detail = () => {
 
 
   return (
-    <>
-      <h1>Detail Dentist id </h1>
+    <div className={theme.body}>
+      <h1 className={theme.title}>Detail Dentist id </h1>
       <table className='table'>
             <thead>
                 <tr>
@@ -41,7 +43,7 @@ const Detail = () => {
                 </tr>
             </tbody>
             </table>
-    </>
+    </div>
   )
 }
 

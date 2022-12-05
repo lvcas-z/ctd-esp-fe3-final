@@ -76,7 +76,6 @@ form{
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
 }
 
 .card:hover{
@@ -91,6 +90,7 @@ form{
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 table {
@@ -143,6 +143,8 @@ nav button{
   width: 2rem;
   height: 2rem;
   margin-top: 20px;
+  background-color: #ffffff;
+  border-color: #8c8c8c;
 }
 
 nav button img{
@@ -173,4 +175,51 @@ p span{
 .title{
   margin: 0px;
   padding: 15px 0px;
+}
+
+.nav-dark{
+  background-color: #000;
+  color: #ffffff;
+}
+
+.nav-light{
+  background-color: #f0f0f0;
+}
+
+.body-dark{
+  background-color: #8c8c8c;
+}
+
+.footer2-dark{
+  background-color: #000;
+  color:#ffffff
+}
+
+.footer2-light{
+  background-color: #ff0000;
+  color:#ffffff
+}
+
+.logo-dark{
+  filter: invert(100%)
+}
+
+.icons-light{
+  filter: invert(100%)
+}
+
+.card-light{
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.card-dark{
+  border: 0.5px solid rgb(165, 165, 165);
+}
+
+.title-dark{
+  color:#d8d8d8
+}
+
+.text{
+  color:#d8d8d8
 }

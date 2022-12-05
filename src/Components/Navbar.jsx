@@ -8,12 +8,12 @@ const Navbar = () => {
   const {theme, toggleTheme, themeName} = useTheme()
 
   return (
-    <nav style={{backgroundColor:theme.backgroundNav, color:theme.textColor}}>
+    <nav className={theme.nav}>
       <p><span>D</span>H Odonto</p>
       <div class= 'items-nav'>
-      <Link to={'/'}><h4 style={{color:theme.textColor}}>Home</h4></Link>
-      <Link to={'/contacto'}><h4 style={{color:theme.textColor}}>Contact</h4></Link>
-      <Link to={'/favs'}><h4 style={{color:theme.textColor}}>Favs</h4></Link>
+      <Link to={'/'}><h4 className={theme.nav}>Home</h4></Link>
+      <Link to={'/contacto'}><h4 className={theme.nav}>Contact</h4></Link>
+      <Link to={'/favs'}><h4 className={theme.nav}>Favs</h4></Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <button onClick={toggleTheme}>{themeName === 'light' ? <img src= '../../images/moon.svg' alt='dark'/> : <img src= '../../images/sun.png' alt='ligth'/>}</button>
       </div>

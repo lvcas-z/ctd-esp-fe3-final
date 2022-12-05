@@ -2,17 +2,24 @@ import React, {createContext, useState, useContext} from "react";
 
 const themeStyles = {
     dark: {
-        backgroundNav: '#000',
-        textColor: '#ffffff',
-        backgroundBody: '#8c8c8c',
-        backgroundSecondFooter: '#000',
-        logoColor: 'invert(100%)'
+        nav: 'nav-dark',
+        navLinks: 'links-dark',
+        body: 'body-dark',
+        secondFooter: 'footer2-dark second-footer',
+        logo: 'logo-dark',
+        icons: 'icons',
+        card: 'card card-dark',
+        text: 'text',
+        title: 'title title-dark',
+
     },
-    light: {
-        backgroundNav: '#f0f0f0',
-        colorFooter: '#ffffff',
-        backgroundSecondFooter: '#ff0000',
-        iconsColor: 'invert(100%)'
+    light:{
+        nav: 'nav-light',
+        navLinks: 'links-light',
+        secondFooter: 'footer2-light second-footer',
+        icons: 'icons-light icons',
+        card: 'card card-light',
+        title: 'title',
     }
 }
 

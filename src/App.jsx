@@ -8,7 +8,6 @@ import Favs from "./Routes/Favs"
 import ThemeProvider from "./Components/utils/ThemeProvider";
 
 function App() {
-
   return (
     <ThemeProvider>
       <div className="App" >

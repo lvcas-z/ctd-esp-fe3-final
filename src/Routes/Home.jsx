@@ -23,8 +23,8 @@ useEffect(()=>{
 },[])
 
   return (
-    <main className=""  style={{backgroundColor:theme.backgroundBody}} >
-      <h1 class= 'title'>Home</h1>
+    <main className={theme.body} >
+      <h1 className={theme.title}>Home</h1>
       <div className='card-grid'>
         {dentists.map(item=>(
           <Card key={item.id} name={item.name} username={item.username} id={item.id} fav={fav} setFav={setFav}/>
