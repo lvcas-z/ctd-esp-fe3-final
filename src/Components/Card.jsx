@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
 import { useTheme } from './utils/ThemeProvider'
 import { useState } from "react";
@@ -8,18 +8,25 @@ const Card = ({name, username, id }) => {
   const {theme} = useTheme()
   const {fav, setFav} = useTheme()
   const [img,setimg] =  useState('../../images/favorite.svg')
+  const pathname = window.location.pathname
+  
+  useEffect(() => {
+    localStorage.setItem('favs', JSON.stringify(fav))
+}, [fav])
 
   const addFav = (e)=>{
-    e.currentTarget.disabled = true
-    
     const newFav ={
       name:name,
       username:username,
       id:id
     }
-    setFav([...fav,newFav])
-    setimg(['../../images/fav2.png'])
-    localStorage.setItem("favs",JSON.stringify(fav))
+    if(fav.some(favId => favId.id === newFav.id)){
+      console.log("El dentista ya fue agregado a favoritos");
+    }
+    else{
+      setFav([...fav,newFav])
+      setimg(['../../images/fav2.png'])
+    }
   }
   
   return (
@@ -29,7 +36,11 @@ const Card = ({name, username, id }) => {
           <h3 className={theme.text}>{name}</h3>
           <p className={theme.text}>{username}</p>
         </Link>
+        {pathname === '/'?
         <button onClick={addFav} className={"favButton"}><img src={img} alt='FavButton' /></button>
+        :
+        <button className={"favButton"}><img src={img} alt='FavButton' /></button>
+        }
       </div>
   );
 };
