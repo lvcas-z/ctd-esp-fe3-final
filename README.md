@@ -1,6 +1,6 @@
 # ctd-fe3-final
 
-Examen Final de Frontend III
+Examen Final de Frontend III Hecho por Ailen Garcia y Lucas Zelaya
 
 ## Indice
 
