@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import Card from '../Components/Card'
-import { useTheme } from '../Components/utils/ThemeProvider'
+import { useTheme } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

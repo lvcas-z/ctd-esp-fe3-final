@@ -1,23 +1,47 @@
-import { useContext } from "react";
-import { createContext } from "react";
+import React, {createContext, useState, useContext} from "react";
 
-export const initialState = {theme: "", data: []}
+const themeStyles = {
+    dark: {
+        nav: 'nav-dark',
+        navLinks: 'links-dark',
+        body: 'body-dark',
+        secondFooter: 'footer2-dark second-footer',
+        logo: 'logo-dark',
+        icons: 'icons',
+        card: 'card card-dark',
+        text: 'text',
+        title: 'title title-dark',
+        footerBody: 'footerBody-dark'
 
-export const ContextGlobal = createContext(undefined);
-
-export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
-
-  return (
-    <ContextGlobal.Provider value={{
-
-    }}>
-      {children}
-    </ContextGlobal.Provider>
-  );
-};
-export default ContextProvider;
-
-export const useContextGlobal=()=>{
-  return useContext(ContextGlobal)
+    },
+    light:{
+        nav: 'nav-light',
+        navLinks: 'links-light',
+        secondFooter: 'footer2-light second-footer',
+        icons: 'icons-light icons',
+        card: 'card card-light',
+        title: 'title',
+        footerBody: 'footerBody-light'
+    }
 }
+
+const ThemeContext = createContext();
+
+const ThemeProvider = (props) => {
+    const [fav,setFav]=useState([])
+    const [theme, setTheme] = useState('light');
+    const toggleTheme = () => {theme === 'light' ? setTheme('dark') : setTheme('light')}
+    const value = {
+        fav,
+        setFav,
+        theme: themeStyles[theme],
+        toggleTheme,
+        themeName: theme
+    };
+    return <ThemeContext.Provider value = {value} {...props}/>
+}
+
+const useTheme = () => useContext(ThemeContext)
+
+export {ThemeProvider as default, useTheme};
+

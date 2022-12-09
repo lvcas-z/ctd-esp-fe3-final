@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from '../Components/Form'
-import { useTheme } from '../Components/utils/ThemeProvider'
+import { useTheme } from '../Components/utils/global.context'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 

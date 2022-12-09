@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import { Link } from "react-router-dom";
-import { useTheme } from './utils/ThemeProvider'
+import { useTheme } from './utils/global.context'
 import { useState } from "react";
 
 
@@ -21,7 +21,7 @@ const Card = ({name, username, id }) => {
       id:id
     }
     if(fav.some(favId => favId.id === newFav.id)){
-      console.log("El dentista ya fue agregado a favoritos");
+      alert("El dentista ya fue agregado a favoritos");
     }
     else{
       setFav([...fav,newFav])
@@ -39,7 +39,7 @@ const Card = ({name, username, id }) => {
         {pathname === '/'?
         <button onClick={addFav} className={"favButton"}><img src={img} alt='FavButton' /></button>
         :
-        <button className={"favButton"}><img src={img} alt='FavButton' /></button>
+        <button className={"favButton"}><img src='../../images/fav2.png' alt='FavButton' /></button>
         }
       </div>
   );

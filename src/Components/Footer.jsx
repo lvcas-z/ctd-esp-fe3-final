@@ -1,5 +1,5 @@
 import React from 'react'
-import { useTheme } from './utils/ThemeProvider'
+import { useTheme } from './utils/global.context'
 
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
   
   return (
     <div className={theme.body}>
-      <p class='second-footer' className={theme.secondFooter} >VOLTAR PARA O TOPO</p>
+      <p class='second-footer' className={theme.secondFooter} > © Made by Ailen Garcia and Lucas Zelaya</p>
     
     <footer className={theme.footer}>
         <img className={theme.logo} src='../../images/DH.png' alt='DH-logo' />

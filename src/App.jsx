@@ -5,7 +5,7 @@ import Home from "./Routes/Home"
 import Contact from "./Routes/Contact"
 import Detail from "./Routes/Detail"
 import Favs from "./Routes/Favs"
-import { useTheme } from './Components/utils/ThemeProvider'
+import { useTheme } from './Components/utils/global.context'
 
 function App() {
   const {theme} = useTheme()

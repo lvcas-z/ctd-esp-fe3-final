@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { useTheme } from '../Components/utils/ThemeProvider'
+import { useTheme } from '../Components/utils/global.context'
 
 
 const Form = () => {
@@ -14,9 +14,9 @@ const Form = () => {
     let re = /\w+\s/g;
 
     if (re.test(name) && name.length>3 && name.length<150 && !/[0-9]/.test(name)){
-      setMessage(`Gracias ${name},te contactaremos cuanto antes via mail`)
+      setMessage(`Thank you ${name}, we will contact you by email as soon as possible`)
     } else {
-        setMessage("Porfavor ingrese los datos correctamente")
+        setMessage("Please verify your information")
     }
     return message
   }
@@ -25,9 +25,9 @@ const Form = () => {
   return (
     <div className={theme.body}>
       <form onSubmit={handleSubmit}>
-        <input required type="text" name='name' placeholder="Nombre Completo" onChange={(e)=>setName(e.target.value)}/>
+        <input required type="text" name='name' placeholder="Fullname" onChange={(e)=>setName(e.target.value)}/>
         <input required type="email" name='email' placeholder="Email"/>
-        <button type="submit">Enviar</button>
+        <button type="submit">Send</button>
       </form>
       <h3>{message}</h3>
     </div>
